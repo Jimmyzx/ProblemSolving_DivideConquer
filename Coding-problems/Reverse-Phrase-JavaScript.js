@@ -38,3 +38,52 @@ function reverseWordsAndPhrase(inputString) {
 console.log(reversedPhrase);
 
 //The map function is used to iterate over each word in the wordsArray. For each word, the split('') method is used to convert the word into an array of characters, reverse() is used to reverse the order of the characters, and join('') is used to convert the array back to a string. This effectively reverses each individual word in the array. After reversing each word, the entire array of reversed words is itself reversed using the reverse() method. Finally, the reversed words are joined using join(' ') to form the reversed phrase. With these modifications, the function now reverses both the order of the words and the characters within each word, resulting in the desired output "gnimmargorp evol I" for the given example "I love programming".
+
+// simplest way to code this:
+const reversedResult = reverseWordsAndPhrase(originalPhrase);
+function reverseWordsAndPhrase(inputString) {
+    return inputString
+        .split(' ')                  // Split the string into an array of words
+        .map(word => word.split('').reverse().join(''))  // Reverse each individual word
+        .reverse()                        // Reverse the order of the words
+        .join(' ');                       // Join the reversed words to form the reversed phrase
+}
+
+// Example usage:
+console.log(reversedResult);
+
+// this would also work for simplicity
+const Phrase = reverseWordsAndPhrase("I Love Programming");
+function reverseWordsAndPhrase(inputString) {
+    return inputString
+      .split(" ")
+      .map((word) => word.split("").reverse().join(""))
+      .reverse()
+      .join(" ");
+  }
+  
+ 
+  console.log(Phrase); // This will now log the reversed phrase and words " gnimmargorP evoL I"
+
+const Phrase = reversePhrase("I Love Programming");
+function reversePhrase(inputString) {
+    return inputString
+      .split(" ")
+    //   .map((word) => word.split("").reverse().join(""))
+      .reverse()
+      .join(" ");
+  }
+  
+ 
+  console.log(Phrase); // this will log reversed words only " Programming Love I "
+  
+  let Phrase = reversedPhrase ('I Love Programming')
+  function reversedPhrase (str) {
+
+    return str
+    
+    .split('').reverse().join('')
+    
+  }
+  
+  console.log(Phrase) // gnimmargorP evoL I
