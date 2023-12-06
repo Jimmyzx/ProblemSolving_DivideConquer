@@ -17,7 +17,6 @@ function reversePhrase(inputString) {
 // Example usage:
 console.log(reversedResult);
 
-
 //In this example, the reversePhrase function takes an input string, splits it into an array of words, reverses the order of the words, and then joins them back together to form the reversed phrase. The split and join functions are used with a space (' ') as the delimiter.
 
 function reverseWordsAndPhrase(inputString) {
