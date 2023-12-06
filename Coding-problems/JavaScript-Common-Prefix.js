@@ -1,3 +1,6 @@
+const strings = ["floor", "flour", "flower", "flow"];
+const result = findCommonPrefix(strings);
+
 function findCommonPrefix(strings) {
     if (!strings || strings.length === 0) {
       return '';
@@ -15,15 +18,13 @@ function findCommonPrefix(strings) {
       if (firstStr[i] === lastStr[i]) {
         commonPrefix += firstStr[i];
       } else {
-        break;
+        break; // Exit the loop if a mismatch is found
       }
     }
   
     return commonPrefix;
   }
   
-  const strings = ["floor", "flour", "flower", "flow"];
-  const result = findCommonPrefix(strings);
   console.log(result); // Output: "flo"
   
 
