@@ -39,8 +39,7 @@ function findCommonPrefix(strings) {
     return '';
   }
 
-  // Sort the array of strings in lexicographical order 
-  // Sort the array of strings to bring similar prefixes together
+  // Sort the array of strings in lexicographical order or sort the array of strings to bring similar prefixes together
   strings.sort();
 
   // Take the first string (lexicographically smallest) and the last string (lexicographically largest) after sorting
