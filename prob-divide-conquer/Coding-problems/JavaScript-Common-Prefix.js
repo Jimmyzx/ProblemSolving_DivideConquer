@@ -26,3 +26,7 @@ function findCommonPrefix(strings) {
   const result = findCommonPrefix(strings);
   console.log(result); // Output: "flo"
   
+
+  //This function first sorts the array of strings to ensure that the strings with similar prefixes are adjacent. Then, it compares the characters of the first and last strings (after sorting) until a mismatch is found. The common prefix is built character by character until the mismatch occurs. In the example provided with the array ["floor", "flour", "flower", "flow"], the output will be "flo".
+
+  
