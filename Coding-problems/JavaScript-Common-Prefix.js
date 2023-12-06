@@ -72,6 +72,47 @@ console.log(result); // Output: "flo"
   //This function first sorts the array of strings to ensure that the strings with similar prefixes are adjacent. Then, it compares the characters of the first and last strings (after sorting) until a mismatch is found. The common prefix is built character by character until the mismatch occurs. In the example provided with the array ["floor", "flour", "flower", "flow"], the output will be "flo".
 
 
+// ***** Pseudo Code ***** //
+
+// Declare an array of strings
+strings = ["floor", "flour", "flower", "flow"]
+
+// Call the findCommonPrefix function with the array of strings and assign the result to the variable "result"
+result = findCommonPrefix(strings)
+
+// Define the findCommonPrefix function, which takes an array of strings as a parameter
+function findCommonPrefix(strings):
+    // Check if the input array is null or empty
+    if strings is null or length of strings is 0:
+        // If so, return an empty string as there is no common prefix
+        return ''
+
+    // Sort the array of strings in lexicographical order
+    sort(strings)
+
+    // Take the first string (lexicographically smallest) and the last string (lexicographically largest) after sorting
+    firstStr = strings[0]
+    lastStr = strings[length of strings - 1]
+
+    // Initialize an empty string to store the common prefix
+    commonPrefix = ''
+
+    // Iterate through the characters of the first string
+    for i from 0 to length of firstStr - 1:
+        // Check if the current character at position 'i' is the same in both the first and last strings
+        if firstStr[i] is equal to lastStr[i]:
+            // If they are the same, add the character to the common prefix
+            append firstStr[i] to commonPrefix
+        else:
+            // If a mismatch is found, exit the loop
+            break
+
+    // Return the common prefix
+    return commonPrefix
+
+// Output the result to the console
+output result
+
 
 
 
