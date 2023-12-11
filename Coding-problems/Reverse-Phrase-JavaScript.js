@@ -83,7 +83,49 @@ function reversePhrase(inputString) {
     return str
     
     .split('').reverse().join('')
-    
+
   }
   
   console.log(Phrase) // gnimmargorP evoL I
+
+
+// Write a function that, given a string representing a sentence, returns the 
+// sentence with the words in the same order but the letter in each word
+// reversed.
+
+// "I love programming" -> "I evol gnimmargorp”
+
+// lowercase the entire string
+
+// use var to create function 
+// split() str
+// reversed str
+// join()
+
+function reverseWords(str) {
+    // console.log(str.split(' '));
+    
+    return str
+    .split(' ')
+    .reverse()
+  }
+  
+  
+  // console.log(reverseWords('I love programming'));
+  
+  
+  function reverseWords1(str) {
+    let wordsArr = str.split(' ');
+    let reversedWordsArr = [];
+  
+    for (let i = 0; i < wordsArr.length; i++) {
+      const wordArr = wordsArr[i].split('');
+  
+      reversedWordsArr.push(wordArr.reverse().join(''));
+    }
+  
+    return reversedWordsArr.join(' ');
+  }
+  
+  
+  console.log(reverseWords1('I love programming'));
